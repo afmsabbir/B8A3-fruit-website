@@ -15,10 +15,78 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind and daisy ui -->
+    <!-- tailwind custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "fruit-primary": "#F85559",
+                    },
+                },
+            },
+        };
+    </script>
+    <!-- tailwind custom -->
+    <!-- vanila css -->
+    <style>
+        .font-lato {
+            font-family: "Lato", sans-serif;
+        }
+    </style>
+    <!-- vanila css -->
 </head>
 
-<body>
-
+<body class="font-lato">
+    <!-- header section start -->
+    <header class="container mx-auto">
+        <!-- nav section start -->
+        <nav class="lg:my-12">
+            <div class="navbar lg:bg-fruit-primary lg:text-white rounded-full py-7 px-5 xl:px-12">
+                <div class="navbar-start w-0 lg:w-1/2">
+                    <div class="hidden lg:flex">
+                        <ul class="menu menu-horizontal hover:text-white px-1 text-lg">
+                            <li><a class="hover:text-white" href="#">Home</a></li>
+                            <li><a class="hover:text-white" href="#">About Us</a></li>
+                            <li><a class="hover:text-white" href="#">Shop</a></li>
+                            <li><a class="hover:text-white" href="#">All Fruits</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-center flex-1 lg:flex-auto">
+                    <a class="normal-case text-xl hidden lg:block"><img class="" src="./images/logo.png" alt="logo" /></a>
+                    <a class="normal-case text-xl block lg:hidden"><img class="" src="./images/logo-black.png" alt="logo" /></a>
+                </div>
+                <div class="navbar-end">
+                    <div class="join hidden lg:flex">
+                        <input class="input join-item rounded-full focus:outline-0 text-fruit-primary"
+                            placeholder="Search here" />
+                        <button class="btn join-item bg-white rounded-r-full border-0">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#121212" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content right-1/2 mt-3 z-30 p-2 shadow bg-base-100 text-fruit-primary rounded-box w-52">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">All Fruits</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- nav section end -->
+    </header>
+    <!-- header section end -->
 </body>
 
 </html>
